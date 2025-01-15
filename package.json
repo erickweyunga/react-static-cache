@@ -1,6 +1,6 @@
 {
   "name": "react-static-cache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React package for caching static assets using service workers",
   "type": "module",
   "main": "dist/index.js",
