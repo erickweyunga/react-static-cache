@@ -1,10 +1,10 @@
-import {CacheConfig} from "../types";
-
-export const generateServiceWorkerScript = (config: CacheConfig): string => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.generateServiceWorkerScript = void 0;
+const generateServiceWorkerScript = (config) => {
     const cacheName = config.cacheName || 'static-cache';
     const version = config.version || 'v1';
     const cacheKey = `${cacheName}-${version}`;
-
     return `
 // Generated Service Worker for react-static-cache
 const CACHE_NAME = '${cacheKey}';
@@ -62,3 +62,4 @@ self.addEventListener('activate', (event) => {
 });
 `;
 };
+exports.generateServiceWorkerScript = generateServiceWorkerScript;
